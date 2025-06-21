@@ -13,16 +13,7 @@ function solution(numbers) {
     const uniqueSum = [...new Set(sum)];    
 
     // 정렬
-    for(i=0; i<uniqueSum.length; i++) {
-        for(j=0; j<uniqueSum.length; j++) {
-            let temp;
-            if(uniqueSum[j]>uniqueSum[j+1]){
-                temp = uniqueSum[j];
-                uniqueSum[j] = uniqueSum[j+1];
-                uniqueSum[j+1] = temp;
-            }
-        }
-    }
+    const answer = uniqueSum.sort((a, b) => a - b);
     
-    return uniqueSum;
+    return answer;
 }
